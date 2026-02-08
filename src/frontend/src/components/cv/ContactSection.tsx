@@ -12,7 +12,7 @@ export function ContactSection({ data }: ContactSectionProps) {
     { icon: Mail, label: 'Email', value: data.email, href: data.email ? `mailto:${data.email}` : undefined },
     { icon: Phone, label: 'Phone', value: data.phone, href: data.phone ? `tel:${data.phone}` : undefined },
     { icon: Linkedin, label: 'LinkedIn', value: 'LinkedIn Profile', href: data.linkedin },
-    { icon: HardDrive, label: 'Google Drive (Projects)', value: 'Google Drive (Projects)', href: data.googleDrive },
+    { icon: HardDrive, label: 'Projects', value: 'Google Drive', href: data.googleDrive },
     { icon: Globe, label: 'Website', value: 'Personal Website', href: data.website },
     { icon: SiX, label: 'Twitter', value: 'Twitter Profile', href: data.twitter }
   ].filter(item => item.href);

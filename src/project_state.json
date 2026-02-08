@@ -3,22 +3,27 @@
   "projectStateVersion": 3,
   "summary": "New project",
   "architectural_notes": [],
-  "known_issues": [
-    "Deployment blocked by domain/slug validation error: \"replace-hero-profile-photo-with-provided-linkedin-\" must be 5–50 chars and contain only letters, numbers, and hyphens."
-  ],
-  "isFixRequest": true,
+  "known_issues": [],
+  "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-date-range-ui-block-calendar-icon-svg-and-the-startdate-enddate-text-span-from-each-experience-card-header-in-the-experience-section-so-those-elements-no-longer-render",
-      "title": "Remove the date-range UI block (Calendar icon SVG and the startDate–endDate text span) from each experience card header in the Experience section, so those elements no longer render.",
+      "id": "feature-update-only-the-two-selected-text-nodes-in-the-contact-section-xpath-html-body-div-div-main-section-6-div-div-div-a-3-div-2-div-1-and-html-body-div-div-main-section-6-div-div-div-a-3-div-2-div-2-so-that-the-first-line-label-displays-exactly-projects-and-the-second-line-value-displays-exactly-google-drive",
+      "title": "Update ONLY the two selected text nodes in the Contact section (XPath: /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[1] and /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[2]) so that the first line (label) displays exactly \"Projects\" and the second line (value) displays exactly \"Google Drive\".",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "projectName": "Remove date range block from Experience entries",
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Update UI labels: change one item to \"Projects\" and another item to \"Google Drive\"",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Update Contact card labels to “Projects” and “Google Drive”",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

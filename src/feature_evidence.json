@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-date-range-ui-block-calendar-icon-svg-and-the-startdate-enddate-text-span-from-each-experience-card-header-in-the-experience-section-so-those-elements-no-longer-render",
-      "featureTitle": "Remove the date-range UI block (Calendar icon SVG and the startDate–endDate text span) from each experience card header in the Experience section, so those elements no longer render.",
+      "featureId": "feature-update-only-the-two-selected-text-nodes-in-the-contact-section-xpath-html-body-div-div-main-section-6-div-div-div-a-3-div-2-div-1-and-html-body-div-div-main-section-6-div-div-div-a-3-div-2-div-2-so-that-the-first-line-label-displays-exactly-projects-and-the-second-line-value-displays-exactly-google-drive",
+      "featureTitle": "Update ONLY the two selected text nodes in the Contact section (XPath: /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[1] and /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[2]) so that the first line (label) displays exactly \"Projects\" and the second line (value) displays exactly \"Google Drive\".",
       "files": [
-        "frontend/src/components/cv/ExperienceSection.tsx"
+        "frontend/src/components/cv/ContactSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

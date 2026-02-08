@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the date-range UI block from each Experience entry so dates and the Calendar icon no longer render.
+**Goal:** Update the Contact section’s third item to display the label “Projects” and the value “Google Drive” without changing any other content.
 
 **Planned changes:**
-- Update the Experience card header to stop rendering the date-range block (Calendar icon SVG and the “{startDate} - {endDate}” text).
-- Adjust header layout so there is no leftover spacing or gap where the removed block used to be, while keeping role, company, and optional location intact.
+- Change the text content of the specified label node in the Contact section (third `<a>` item) to exactly “Projects”.
+- Change the text content of the specified value node in the Contact section (third `<a>` item) to exactly “Google Drive”.
 
-**User-visible outcome:** In the Experience section, users no longer see the Calendar icon or date range text on any experience card, and the header layout remains clean and correctly aligned.
+**User-visible outcome:** In the Contact section, the third contact card shows “Projects” on the first line and “Google Drive” on the second line, with the Google Drive link destination unchanged.

@@ -1,57 +1,30 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T13:16:52.882Z",
-  "summary": "REQ-1 appears implemented: the ExperienceSection header no longer renders any calendar/date-range UI block, while role/company/location still render. However, the diff summary also indicates several unrelated frontend changes (and even CV data changes) that were explicitly out of scope/non-goals.",
+  "generatedAt": "2026-02-08T13:21:06.085Z",
+  "summary": "REQ-1 label/value updates for the Google Drive contact item appear to be implemented in ContactSection, but there are additional, unrequested edits (including modifying other files and changes beyond the two specified text nodes).",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Unrequested change to footer attribution/closing message in App component.",
-      "reason": "BuildRequest explicitly scoped changes to removing the Experience date-range block only; no footer/app copy changes were requested.",
+      "description": "Modified files other than the Contact section component, despite the constraint to apply changes ONLY to the two selected elements.",
+      "reason": "The BuildRequest restricts changes to only the two specified text nodes; editing auxiliary tracking/summary files is not requested.",
       "evidence": [
-        "frontend-file-summaries.txt (entry for frontend/src/App.tsx)"
+        "frontend-file-summaries.txt",
+        "project_state.json"
       ]
     },
     {
-      "description": "Unrequested modifications to CV data content and ContactData type (email/LinkedIn/Google Drive link changes).",
-      "reason": "Non-goals explicitly state: \"Do not change any CV data content in frontend/src/data/cv.ts.\"",
+      "description": "Changes in ContactSection.tsx that go beyond updating the two specified text nodes (e.g., icon import/usage).",
+      "reason": "REQ-1/constraints specify updating ONLY the two selected text nodes; adding/changing imports/icons is an additional modification not explicitly requested.",
       "evidence": [
-        "frontend-file-summaries.txt (entry for frontend/src/data/cv.ts)"
-      ]
-    },
-    {
-      "description": "Unrequested changes to TopNav branding/logo and navigation behavior.",
-      "reason": "Not requested; BuildRequest forbids adding/changing features outside removing the specified Experience date block.",
-      "evidence": [
-        "frontend-file-summaries.txt (entry for frontend/src/components/cv/TopNav.tsx)"
-      ]
-    },
-    {
-      "description": "Unrequested SEO hook behavior additions/changes.",
-      "reason": "Not requested; outside the scope of removing the Experience date block.",
-      "evidence": [
-        "frontend-file-summaries.txt (entry for frontend/src/hooks/useSeoFromCvData.ts)"
-      ]
-    },
-    {
-      "description": "Unrequested global styling/theme changes (colors, fonts, shadows, smooth scroll).",
-      "reason": "Not requested; outside the scope of removing the Experience date block.",
-      "evidence": [
-        "frontend-file-summaries.txt (entries for frontend/src/index.css, frontend/tailwind.config.js, frontend/index.html)"
-      ]
-    },
-    {
-      "description": "Unrequested Contact section label change (Google Drive label).",
-      "reason": "Not requested; outside the scope of removing the Experience date block.",
-      "evidence": [
-        "frontend-file-summaries.txt (entry for frontend/src/components/cv/ContactSection.tsx)"
+        "frontend/src/components/cv/ContactSection.tsx"
       ]
     }
   ],
-  "confidence": 0.62,
+  "confidence": 0.63,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/cv/ExperienceSection.tsx",
+    "frontend/src/components/cv/ContactSection.tsx",
     "project_state.json"
   ]
 }

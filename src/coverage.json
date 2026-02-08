@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T13:16:52.885Z",
+  "generatedAt": "2026-02-08T13:21:06.087Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Remove the date-range UI block (Calendar icon SVG and the startDate–endDate text span) from each experience card header in the Experience section, so those elements no longer render.",
+        "summary": "Update ONLY the two selected text nodes in the Contact section (XPath: /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[1] and /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[2]) so that the first line (label) displays exactly \"Projects\" and the second line (value) displays exactly \"Google Drive\".",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/cv/ExperienceSection.tsx"
+          "frontend/src/components/cv/ContactSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/cv/ExperienceSection.tsx"
+          "frontend/src/components/cv/ContactSection.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/cv/ExperienceSection.tsx",
+    "frontend/src/components/cv/ContactSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

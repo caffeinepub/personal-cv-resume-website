@@ -1,22 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove Experience date-range header block",
+  "title": "Update Contact card label/value to Projects and Google Drive",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove the calendar/date-range block from each Experience card header while preserving role/company/location layout.",
+      "summary": "Change only the Google Drive contact card’s label and value text to exactly “Projects” and “Google Drive” while keeping the existing href.",
       "acceptanceCriteria": [
-        "In the Experience section, the Calendar icon is not visible anywhere in experience entries.",
-        "In the Experience section, the date text (\"{startDate} - {endDate}\") is not visible anywhere in experience entries.",
-        "The Experience card header layout has no empty vertical gap where the removed date block used to be.",
-        "Other header elements (role, company, and optional location) still render correctly."
+        "The contact item corresponding to the third <a> in Contact section shows label text exactly \"Projects\" (replacing the previous label).",
+        "The same contact item shows value text exactly \"Google Drive\" (replacing the previous value).",
+        "No other labels/values in the Contact section are changed.",
+        "The Google Drive link target (href) remains unchanged and still points to the existing data.googleDrive URL."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/cv/ExperienceSection.tsx",
+          "path": "frontend/src/components/cv/ContactSection.tsx",
           "operation": "modify",
-          "description": "Remove the Calendar import and the date-range header JSX block (Calendar icon + startDate–endDate span). Update the header layout so the right-side column only renders when location exists (to avoid an empty gap/column after removing dates), while keeping role and company rendering unchanged."
+          "description": "Update ONLY the HardDrive (Google Drive) contactItems entry so its `label` string is exactly \"Projects\" and its `value` string is exactly \"Google Drive\", without changing `href: data.googleDrive` and without modifying any other contact item text (to match the two provided XPath-selected text nodes)."
         }
       ]
     }

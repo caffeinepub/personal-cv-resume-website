@@ -8,7 +8,7 @@
   "frontend/src/components/cv/EducationSection.tsx": "Education section component displaying academic credentials with degree, institution, dates, location, and additional details.",
   "frontend/src/components/cv/SkillsSection.tsx": "Skills section component organizing technical and soft skills into categorized groups with badge-style tags.",
   "frontend/src/components/cv/ProjectsSection.tsx": "Projects section component showcasing portfolio items with descriptions, technologies, and links to live demos and GitHub repositories.",
-  "frontend/src/components/cv/ContactSection.tsx": "Contact section component displaying contact methods and social links with icons in an interactive card grid layout; Google Drive label updated to \"Google Drive (Projects)\".",
+  "frontend/src/components/cv/ContactSection.tsx": "Contact section component displaying contact methods and social links with icons in an interactive card grid layout; Google Drive contact item now shows \"Projects\" as label and \"Google Drive\" as value.",
   "frontend/src/hooks/useSeoFromCvData.ts": "Custom hook that dynamically sets document title and meta tags (description, Open Graph, Twitter Card) based on CV data for SEO and social sharing.",
   "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks; currently unused as all CV data is static and sourced from the data module.",
   "frontend/src/index.css": "Global styles with OKLCH-based warm earthy color system (terracotta primary, beige secondary) for both light and dark modes, plus smooth scroll behavior.",

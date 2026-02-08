@@ -1,56 +1,26 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update static profile photo, Google Drive label, and footer closing message",
+  "title": "Apply uploaded profile photo asset to Hero avatar",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the Hero avatar image by updating the generated static asset while keeping the existing avatar src path unchanged.",
+      "summary": "Replace the Hero section avatar with the uploaded profile photo by installing it as a static generated asset while keeping the Hero <img> src unchanged.",
       "acceptanceCriteria": [
-        "`frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` exists in the build output and visually matches the uploaded photo.",
-        "The Hero section continues to load the avatar from `/assets/generated/vibhanshu-profile.dim_512x512.jpg` without any backend fetch.",
-        "No broken image icon is shown for the avatar on page load."
+        "A file exists at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` and is derived from `cropped_circle_image-1.png`.",
+        "When the app is loaded, the avatar image in the Hero section displays the new photo (no broken image icon).",
+        "The Hero section avatar image `src` remains `/assets/generated/vibhanshu-profile.dim_512x512.jpg` (no backend dependency for image loading)."
       ],
       "file_operations": [
         {
           "path": "frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg",
-          "operation": "modify",
-          "description": "Replace the existing generated avatar image with a 512x512 JPG derived from the uploaded `cropped_circle_image.png`, ensuring the output filename is exactly `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` and matches the provided photo."
+          "operation": "create",
+          "description": "Add the static profile photo asset at this exact path, generated from the uploaded source file `cropped_circle_image-1.png` (export/convert to a square 512x512 JPG as needed) so the app can load it via `/assets/generated/vibhanshu-profile.dim_512x512.jpg`."
         },
         {
           "path": "frontend/src/components/cv/HeroSection.tsx",
           "operation": "modify",
-          "description": "Confirm the Hero avatar continues to reference the static path `/assets/generated/vibhanshu-profile.dim_512x512.jpg` (no backend fetch) and make no other behavioral/layout changes beyond ensuring the correct asset is used."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Update the Google Drive contact card label to display \"Google Drive (Projects)\" while keeping the existing link behavior.",
-      "acceptanceCriteria": [
-        "In the Contact section, the Google Drive contact card displays the text \"Google Drive (Projects)\".",
-        "The Google Drive card still links to the existing `cvData.contact.googleDrive` URL and opens in a new tab."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/cv/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Change the Google Drive contact item's displayed text to \"Google Drive (Projects)\" (while keeping the href bound to `data.googleDrive` and preserving the new-tab behavior for http(s) links)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Replace the footer copyright/caffeine.ai line with the provided closing message including a line break.",
-      "acceptanceCriteria": [
-        "The footer no longer contains the copyright/caffeine.ai line or link.",
-        "The footer displays the provided closing message, including a line break between the sentence and the \"Regards Vibhanshu\" line."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Remove the existing copyright/caffeine.ai footer content and render the exact closing message text with a line break between the two lines (e.g., via a `<br />` or equivalent) while keeping the existing footer container styling intact."
+          "description": "Verify the Hero avatar <img> continues to use `src=\"/assets/generated/vibhanshu-profile.dim_512x512.jpg\"` and make any non-breaking adjustments needed to ensure the image reliably renders (e.g., optional rendering attributes) without changing the src path or introducing backend image loading."
         }
       ]
     }

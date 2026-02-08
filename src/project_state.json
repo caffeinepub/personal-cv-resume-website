@@ -4,28 +4,21 @@
   "summary": "New project",
   "architectural_notes": [],
   "known_issues": [
-    "Profile photo is not being applied/updated on the site yet."
+    "Deployment blocked by domain/slug validation error: \"replace-hero-profile-photo-with-provided-linkedin-\" must be 5–50 chars and contain only letters, numbers, and hyphens."
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Square-cropped headshot photo (vibhanshu-profile.dim_512x512.jpg, 512x512)",
-  "existing_features": [],
-  "new_feature_requests": [
+  "existing_features": [
     {
-      "id": "AR-1",
-      "summary": "Add/set the provided image as the user's profile photo on the website (currently not applied).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Add the user-uploaded image as the site profile photo by placing it as a static asset at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg`, using the uploaded file `cropped_circle_image-1.png` as the source input, and ensure the existing Hero avatar `<img>` continues to load from `/assets/generated/vibhanshu-profile.dim_512x512.jpg`.",
+      "id": "feature-remove-the-date-range-ui-block-calendar-icon-svg-and-the-startdate-enddate-text-span-from-each-experience-card-header-in-the-experience-section-so-those-elements-no-longer-render",
+      "title": "Remove the date-range UI block (Calendar icon SVG and the startDate–endDate text span) from each experience card header in the Experience section, so those elements no longer render.",
       "reqIds": [
         "REQ-1"
       ],
-      "status": "pending"
+      "version": 1
     }
   ],
-  "projectName": "Apply uploaded profile photo in Hero section",
+  "new_feature_requests": [],
+  "projectName": "Remove date range block from Experience entries",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

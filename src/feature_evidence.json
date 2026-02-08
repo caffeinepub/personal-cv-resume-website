@@ -1,4 +1,23 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-remove-the-date-range-ui-block-calendar-icon-svg-and-the-startdate-enddate-text-span-from-each-experience-card-header-in-the-experience-section-so-those-elements-no-longer-render",
+      "featureTitle": "Remove the date-range UI block (Calendar icon SVG and the startDate–endDate text span) from each experience card header in the Experience section, so those elements no longer render.",
+      "files": [
+        "frontend/src/components/cv/ExperienceSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Apply the user-uploaded profile photo so the Hero section avatar displays the new image via a static frontend asset.
+**Goal:** Remove the date-range UI block from each Experience entry so dates and the Calendar icon no longer render.
 
 **Planned changes:**
-- Convert the uploaded `cropped_circle_image-1.png` into a square 512×512 JPG and place it at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg`.
-- Keep the Hero avatar `<img>` `src` unchanged as `/assets/generated/vibhanshu-profile.dim_512x512.jpg` so it loads without any backend dependency.
+- Update the Experience card header to stop rendering the date-range block (Calendar icon SVG and the “{startDate} - {endDate}” text).
+- Adjust header layout so there is no leftover spacing or gap where the removed block used to be, while keeping role, company, and optional location intact.
 
-**User-visible outcome:** The Hero section avatar shows the new uploaded profile photo with no broken image icon.
+**User-visible outcome:** In the Experience section, users no longer see the Calendar icon or date range text on any experience card, and the header layout remains clean and correctly aligned.

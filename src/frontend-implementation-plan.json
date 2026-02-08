@@ -1,26 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Apply uploaded profile photo asset to Hero avatar",
+  "title": "Remove Experience date-range header block",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the Hero section avatar with the uploaded profile photo by installing it as a static generated asset while keeping the Hero <img> src unchanged.",
+      "summary": "Remove the calendar/date-range block from each Experience card header while preserving role/company/location layout.",
       "acceptanceCriteria": [
-        "A file exists at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` and is derived from `cropped_circle_image-1.png`.",
-        "When the app is loaded, the avatar image in the Hero section displays the new photo (no broken image icon).",
-        "The Hero section avatar image `src` remains `/assets/generated/vibhanshu-profile.dim_512x512.jpg` (no backend dependency for image loading)."
+        "In the Experience section, the Calendar icon is not visible anywhere in experience entries.",
+        "In the Experience section, the date text (\"{startDate} - {endDate}\") is not visible anywhere in experience entries.",
+        "The Experience card header layout has no empty vertical gap where the removed date block used to be.",
+        "Other header elements (role, company, and optional location) still render correctly."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg",
-          "operation": "create",
-          "description": "Add the static profile photo asset at this exact path, generated from the uploaded source file `cropped_circle_image-1.png` (export/convert to a square 512x512 JPG as needed) so the app can load it via `/assets/generated/vibhanshu-profile.dim_512x512.jpg`."
-        },
-        {
-          "path": "frontend/src/components/cv/HeroSection.tsx",
+          "path": "frontend/src/components/cv/ExperienceSection.tsx",
           "operation": "modify",
-          "description": "Verify the Hero avatar <img> continues to use `src=\"/assets/generated/vibhanshu-profile.dim_512x512.jpg\"` and make any non-breaking adjustments needed to ensure the image reliably renders (e.g., optional rendering attributes) without changing the src path or introducing backend image loading."
+          "description": "Remove the Calendar import and the date-range header JSX block (Calendar icon + startDate–endDate span). Update the header layout so the right-side column only renders when location exists (to avoid an empty gap/column after removing dates), while keeping role and company rendering unchanged."
         }
       ]
     }

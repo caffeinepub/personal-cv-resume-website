@@ -1,2 +1,3 @@
-# personal-cv-resume-website
-Exported from Caffeine project: Update profile photo asset, Google Drive label, and footer closing message
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

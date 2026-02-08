@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Update personal website to include user's profile photo, adjust Google Drive label to include \"Projects\" in brackets, and replace the footer line with a custom closing message.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Square-cropped headshot photo (vibhanshu-profile.dim_512x512.jpg, 512x512)",
+  "existing_features": [
+    {
+      "id": "feature-update-the-contact-section-google-drive-card-text-so-it-includes-the-word-projects-in-brackets-i-e-display-google-drive-projects-for-the-google-drive-contact-item",
+      "title": "Update the Contact section Google Drive card text so it includes the word \"Projects\" in brackets, i.e., display \"Google Drive (Projects)\" for the Google Drive contact item.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-footer-line-2026-built-with-using-caffeine-ai-and-replace-it-with-the-following-closing-message-preserve-the-wording-would-love-to-connect-and-share-my-ideas-and-vision-about-the-data-related-work-regards-vibhanshu",
+      "title": "Remove the footer line \"© 2026. Built with ❤️ using caffeine.ai\" and replace it with the following closing message (preserve the wording):\n\"Would love to connect and share my ideas and Vision about the data related work.\n Regards Vibhanshu\"",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add user's profile photo to the site (user provided a profile photo to upload/use).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update the Google Drive label/text to include \"Projects\" in brackets (e.g., \"Google Drive (Projects)\").",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Remove footer line \"© 2026. Built with ❤️ using caffeine.ai\" and replace with the provided message ending with \"Regards Vibhanshu\".",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Replace the Hero section avatar image with the user-uploaded profile photo by generating/placing it as a static asset at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg`, keeping the existing Hero avatar `img` src pointing to `/assets/generated/vibhanshu-profile.dim_512x512.jpg`. Use the uploaded `cropped_circle_image.png` as the source input for this asset.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Update profile photo asset, Google Drive label, and footer closing message",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

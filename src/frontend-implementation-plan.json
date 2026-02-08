@@ -1,0 +1,58 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update static profile photo, Google Drive label, and footer closing message",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the Hero avatar image by updating the generated static asset while keeping the existing avatar src path unchanged.",
+      "acceptanceCriteria": [
+        "`frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` exists in the build output and visually matches the uploaded photo.",
+        "The Hero section continues to load the avatar from `/assets/generated/vibhanshu-profile.dim_512x512.jpg` without any backend fetch.",
+        "No broken image icon is shown for the avatar on page load."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg",
+          "operation": "modify",
+          "description": "Replace the existing generated avatar image with a 512x512 JPG derived from the uploaded `cropped_circle_image.png`, ensuring the output filename is exactly `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` and matches the provided photo."
+        },
+        {
+          "path": "frontend/src/components/cv/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Confirm the Hero avatar continues to reference the static path `/assets/generated/vibhanshu-profile.dim_512x512.jpg` (no backend fetch) and make no other behavioral/layout changes beyond ensuring the correct asset is used."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Update the Google Drive contact card label to display \"Google Drive (Projects)\" while keeping the existing link behavior.",
+      "acceptanceCriteria": [
+        "In the Contact section, the Google Drive contact card displays the text \"Google Drive (Projects)\".",
+        "The Google Drive card still links to the existing `cvData.contact.googleDrive` URL and opens in a new tab."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/cv/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Change the Google Drive contact item's displayed text to \"Google Drive (Projects)\" (while keeping the href bound to `data.googleDrive` and preserving the new-tab behavior for http(s) links)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Replace the footer copyright/caffeine.ai line with the provided closing message including a line break.",
+      "acceptanceCriteria": [
+        "The footer no longer contains the copyright/caffeine.ai line or link.",
+        "The footer displays the provided closing message, including a line break between the sentence and the \"Regards Vibhanshu\" line."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove the existing copyright/caffeine.ai footer content and render the exact closing message text with a line break between the two lines (e.g., via a `<br />` or equivalent) while keeping the existing footer container styling intact."
+        }
+      ]
+    }
+  ]
+}

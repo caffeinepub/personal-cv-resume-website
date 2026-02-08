@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-contact-section-google-drive-card-text-so-it-includes-the-word-projects-in-brackets-i-e-display-google-drive-projects-for-the-google-drive-contact-item",
+      "featureTitle": "Update the Contact section Google Drive card text so it includes the word \"Projects\" in brackets, i.e., display \"Google Drive (Projects)\" for the Google Drive contact item.",
+      "files": [
+        "frontend/src/components/cv/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-footer-line-2026-built-with-using-caffeine-ai-and-replace-it-with-the-following-closing-message-preserve-the-wording-would-love-to-connect-and-share-my-ideas-and-vision-about-the-data-related-work-regards-vibhanshu",
+      "featureTitle": "Remove the footer line \"© 2026. Built with ❤️ using caffeine.ai\" and replace it with the following closing message (preserve the wording):\n\"Would love to connect and share my ideas and Vision about the data related work.\n Regards Vibhanshu\"",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

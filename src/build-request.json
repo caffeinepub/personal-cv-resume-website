@@ -1,0 +1,84 @@
+{
+  "kind": "build_request",
+  "title": "Update profile photo asset, Google Drive label, and footer closing message",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the Hero section avatar image with the user-uploaded profile photo by generating/placing it as a static asset at `frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg`, keeping the existing Hero avatar `img` src pointing to `/assets/generated/vibhanshu-profile.dim_512x512.jpg`. Use the uploaded `cropped_circle_image.png` as the source input for this asset.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "this s my profile photo."
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/public/assets/generated/vibhanshu-profile.dim_512x512.jpg` exists in the build output and visually matches the uploaded photo.",
+        "The Hero section continues to load the avatar from `/assets/generated/vibhanshu-profile.dim_512x512.jpg` without any backend fetch.",
+        "No broken image icon is shown for the avatar on page load."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update the Contact section Google Drive card text so it includes the word \"Projects\" in brackets, i.e., display \"Google Drive (Projects)\" for the Google Drive contact item.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "and In google Drive Write add this \"Projects\" work in brackets."
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the Contact section, the Google Drive contact card displays the text \"Google Drive (Projects)\".",
+        "The Google Drive card still links to the existing `cvData.contact.googleDrive` URL and opens in a new tab."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Remove the footer line \"© 2026. Built with ❤️ using caffeine.ai\" and replace it with the following closing message (preserve the wording):\n\"Would love to connect and share my ideas and Vision about the data related work.\n Regards Vibhanshu\"",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "and remove last line \"© 2026. Built with ❤️ using caffeine.ai\" and replace it with \"Would love to connect and share my ideas and Vision about the data related work.\n Regards Vibhanshu\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The footer no longer contains the copyright/caffeine.ai line or link.",
+        "The footer displays the provided closing message, including a line break between the sentence and the \"Regards Vibhanshu\" line."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under `frontend/src/components/ui` (read-only components).",
+    "Do not add any backend dependency for serving the profile photo; serve it only as a static frontend asset."
+  ],
+  "nonGoals": [
+    "Changing any other CV content (experience/education/skills/projects) beyond the Google Drive label text update.",
+    "Adding new contact methods or changing the Google Drive URL.",
+    "Changing the site theme, layout, or navigation behavior."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Square-cropped headshot photo (vibhanshu-profile.dim_512x512.jpg, 512x512)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

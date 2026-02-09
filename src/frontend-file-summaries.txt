@@ -3,7 +3,7 @@
   "frontend/src/data/cv.ts": "Central data module containing all CV content for Vibhanshu Meshram with updated contact information (new email, LinkedIn, Google Drive link) and extended ContactData type to support Google Drive.",
   "frontend/src/components/cv/TopNav.tsx": "Fixed top navigation component with smooth scroll anchors to all sections, active section highlighting, and responsive mobile menu; logo replaced with text-based brand initials \"VM\".",
   "frontend/src/components/cv/Section.tsx": "Reusable section wrapper component that enforces consistent spacing, typography, and max-width layout across all CV sections.",
-  "frontend/src/components/cv/HeroSection.tsx": "Hero section component displaying name, title, summary, location, and profile photo with call-to-action buttons; now uses the LinkedIn profile image URL as the profile photo.",
+  "frontend/src/components/cv/HeroSection.tsx": "Hero section component displaying name, title, summary, location, and profile photo with call-to-action buttons; now uses the updated LinkedIn profile image URL (ending in 1770541359476).",
   "frontend/src/components/cv/ExperienceSection.tsx": "Experience section component rendering a timeline of work history with role, company, location (when present), and bullet-point descriptions; date-range block removed from card headers.",
   "frontend/src/components/cv/EducationSection.tsx": "Education section component displaying academic credentials with degree, institution, dates, location, and additional details.",
   "frontend/src/components/cv/SkillsSection.tsx": "Skills section component organizing technical and soft skills into categorized groups with badge-style tags.",

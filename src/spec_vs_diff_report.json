@@ -1,30 +1,29 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T13:21:06.085Z",
-  "summary": "REQ-1 label/value updates for the Google Drive contact item appear to be implemented in ContactSection, but there are additional, unrequested edits (including modifying other files and changes beyond the two specified text nodes).",
+  "generatedAt": "2026-02-09T13:21:17.709Z",
+  "summary": "REQ-1 appears implemented: HeroSection profile <img> src updated to the exact provided LinkedIn URL while keeping the circular styling. No other Hero content changes are evident in the provided HeroSection.tsx diff. However, there are unrelated metadata/documentation changes in project_state.json and frontend-file-summaries.txt that were not requested.",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Modified files other than the Contact section component, despite the constraint to apply changes ONLY to the two selected elements.",
-      "reason": "The BuildRequest restricts changes to only the two specified text nodes; editing auxiliary tracking/summary files is not requested.",
+      "description": "Updated/added internal tracking entries (AR-1, AR-2) and marked them as pending in project_state.json",
+      "reason": "BuildRequest only asked to update the Hero profile photo URL; it did not request changes to project tracking/state files.",
       "evidence": [
-        "frontend-file-summaries.txt",
         "project_state.json"
       ]
     },
     {
-      "description": "Changes in ContactSection.tsx that go beyond updating the two specified text nodes (e.g., icon import/usage).",
-      "reason": "REQ-1/constraints specify updating ONLY the two selected text nodes; adding/changing imports/icons is an additional modification not explicitly requested.",
+      "description": "Added/updated frontend-file-summaries.txt content describing numerous unrelated changes across the app (e.g., App footer attribution, CV data contact updates, navigation/logo changes, theme/colors, SEO hook, etc.)",
+      "reason": "BuildRequest explicitly constrained the change scope to updating the Hero profile photo source and not altering other CV content/theme/layout; these additional described changes were not requested (even if only documented).",
       "evidence": [
-        "frontend/src/components/cv/ContactSection.tsx"
+        "frontend-file-summaries.txt"
       ]
     }
   ],
-  "confidence": 0.63,
+  "confidence": 0.78,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/cv/ContactSection.tsx",
+    "frontend/src/components/cv/HeroSection.tsx",
     "project_state.json"
   ]
 }

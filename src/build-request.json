@@ -1,39 +1,47 @@
 {
   "kind": "build_request",
-  "title": "Update Contact card labels to “Projects” and “Google Drive”",
+  "title": "Update Hero profile photo to provided URL",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update ONLY the two selected text nodes in the Contact section (XPath: /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[1] and /html/body/div/div/main/section[6]/div/div/div/a[3]/div[2]/div[2]) so that the first line (label) displays exactly \"Projects\" and the second line (value) displays exactly \"Google Drive\".",
+      "text": "Update the profile photo displayed in the Hero section to use this exact image URL as the <img> src: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-3"
+          "msg-user-1"
         ],
         "quotes": [
-          "Change this to Projects and change nother one to Google Drive"
+          "Add this profile photo https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU"
         ]
       },
       "acceptanceCriteria": [
-        "The contact item corresponding to the third <a> in Contact section shows label text exactly \"Projects\" (replacing the previous label).",
-        "The same contact item shows value text exactly \"Google Drive\" (replacing the previous value).",
-        "No other labels/values in the Contact section are changed.",
-        "The Google Drive link target (href) remains unchanged and still points to the existing data.googleDrive URL."
+        "The Hero section profile image loads from the provided LinkedIn URL and visually replaces the previous photo.",
+        "No other Hero content (name, title, summary, CTA buttons) changes as part of this update.",
+        "The profile image remains circular (rounded-full) and keeps its existing sizing and border styling."
       ]
     }
   ],
   "constraints": [
-    "Apply changes ONLY to the two selected elements identified by the provided XPath expressions.",
-    "Use English for all user-facing text.",
-    "Do not modify any files under frontend/src/components/ui or other immutablePaths."
+    "Do not modify any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui (immutable paths).",
+    "Use English for any user-facing text."
   ],
   "nonGoals": [
-    "No changes to navigation titles, other sections, or the Google Drive URL/data model.",
-    "No backend changes."
+    "Do not add backend functionality or persist profile images in the canister.",
+    "Do not change the overall site theme, layout, or other CV section content beyond updating the Hero profile photo source."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

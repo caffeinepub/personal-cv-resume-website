@@ -1,22 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Contact card label/value to Projects and Google Drive",
+  "title": "Update Hero profile photo src to provided LinkedIn URL",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Change only the Google Drive contact card’s label and value text to exactly “Projects” and “Google Drive” while keeping the existing href.",
+      "summary": "Replace the Hero section profile image src with the provided LinkedIn image URL without changing any other Hero content or styling.",
       "acceptanceCriteria": [
-        "The contact item corresponding to the third <a> in Contact section shows label text exactly \"Projects\" (replacing the previous label).",
-        "The same contact item shows value text exactly \"Google Drive\" (replacing the previous value).",
-        "No other labels/values in the Contact section are changed.",
-        "The Google Drive link target (href) remains unchanged and still points to the existing data.googleDrive URL."
+        "The Hero section profile image loads from the provided LinkedIn URL and visually replaces the previous photo.",
+        "No other Hero content (name, title, summary, CTA buttons) changes as part of this update.",
+        "The profile image remains circular (rounded-full) and keeps its existing sizing and border styling."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/cv/ContactSection.tsx",
+          "path": "frontend/src/components/cv/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update ONLY the HardDrive (Google Drive) contactItems entry so its `label` string is exactly \"Projects\" and its `value` string is exactly \"Google Drive\", without changing `href: data.googleDrive` and without modifying any other contact item text (to match the two provided XPath-selected text nodes)."
+          "description": "Update the <img> src in the Hero section to exactly: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU. Keep all existing alt text, className (rounded-full, sizing, border, shadow, object-cover), and all other Hero content unchanged."
         }
       ]
     }

@@ -22,7 +22,7 @@ export function HeroSection({ data }: HeroSectionProps) {
       <div className="relative z-10 container mx-auto px-4 max-w-4xl text-center pt-16">
         <div className="mb-6 flex justify-center">
           <img 
-            src="https://media.licdn.com/dms/image/v2/D4D03AQHqceyOzMUFgw/profile-displayphoto-scale_200_200/B4DZw8ags0JEAY-/0/1770540112025?e=1772064000&v=beta&t=4iOYe_UUUeQiMMLmufHpz2BQDP7PqV_rgafiasTwEnY" 
+            src="https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU" 
             alt="Vibhanshu Meshram" 
             className="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-primary shadow-lg object-cover"
           />

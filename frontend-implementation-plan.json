@@ -1,26 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Set LinkedIn photo as profile picture in Hero section",
+  "title": "Update profile picture from LinkedIn URL",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the HeroSection profile picture with the downloaded LinkedIn image served as a local static asset",
+      "summary": "Replace the current profile photo in HeroSection with the new LinkedIn image saved as a local static asset",
       "acceptanceCriteria": [
-        "The profile photo displayed in the HeroSection matches the provided LinkedIn image.",
-        "The image is served from frontend/public/assets/generated/profile-photo.png (no external URL dependency).",
-        "The existing fallback-on-error behavior in HeroSection is preserved."
+        "The new LinkedIn photo is saved as a local static asset under frontend/public/assets/generated/",
+        "HeroSection.tsx references the new local asset as the profile picture src",
+        "The profile photo displayed in the hero section matches the provided LinkedIn image"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/profile-photo.png",
-          "operation": "create",
-          "description": "Download the image from https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it to this path as a static asset for use in the HeroSection component."
-        },
-        {
           "path": "frontend/src/components/cv/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the profile picture image source to use the local asset at /assets/generated/profile-photo.png instead of any existing placeholder or external URL. Preserve the existing fallback-on-error behavior for the profile image."
+          "description": "Update the profile photo src to reference the new generated asset at frontend/public/assets/generated/profile-photo.dim_400x400.png instead of the previous profile image. The generated image matches the LinkedIn photo provided by the user and replaces any previously set profile photo."
         }
       ]
     }

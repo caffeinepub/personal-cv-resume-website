@@ -5,10 +5,11 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional headshot portrait photo of a young man, warm-toned background, business casual attire (profile-photo.dim_400x400.png)",
   "existing_features": [
     {
-      "id": "feature-download-the-image-from-the-url-https-media-licdn-com-dms-image-v2-d4d03aqg-vkicm3o7oq-profile-displayphoto-scale-400-400-b4dzw8fro0hwag-0-1770541359476-e-1773878400-v-beta-t-hnlshkqfneh-boegm1kbbhx7f8u1p42pua-dt2djzkk-and-save-it-as-a-static-asset-frontend-public-assets-generated-profile-photo-png-then-update-the-herosection-component-to-use-this-local-asset-as-the-profile-picture-image-source-instead-of-any-existing-placeholder-or-external-url",
-      "title": "Download the image from the URL https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as a static asset (frontend/public/assets/generated/profile-photo.png), then update the HeroSection component to use this local asset as the profile picture image source instead of any existing placeholder or external URL.",
+      "id": "feature-download-the-image-at-https-media-licdn-com-dms-image-v2-d4d03aqg-vkicm3o7oq-profile-displayphoto-scale-400-400-b4dzw8fro0hwag-0-1770541359476-e-1773878400-v-beta-t-hnlshkqfneh-boegm1kbbhx7f8u1p42pua-dt2djzkk-and-save-it-as-the-profile-photo-static-asset-then-update-herosection-tsx-to-use-this-new-image-as-the-profile-picture-replacing-any-previously-set-profile-photo",
+      "title": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
       "reqIds": [
         "REQ-1"
       ],
@@ -16,7 +17,7 @@
     }
   ],
   "new_feature_requests": [],
-  "projectName": "Set LinkedIn photo as profile picture in Hero section",
+  "projectName": "Update profile picture from LinkedIn URL",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

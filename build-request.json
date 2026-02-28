@@ -1,38 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Set LinkedIn photo as profile picture in Hero section",
+  "title": "Update profile picture from LinkedIn URL",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Download the image from the URL https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as a static asset (frontend/public/assets/generated/profile-photo.png), then update the HeroSection component to use this local asset as the profile picture image source instead of any existing placeholder or external URL.",
+      "text": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-latest"
         ],
         "quotes": [
-          "set this image as profile picture"
+          "add this image as profile pic"
         ]
       },
       "acceptanceCriteria": [
-        "The profile photo displayed in the HeroSection matches the provided LinkedIn image.",
-        "The image is served from frontend/public/assets/generated/profile-photo.png (no external URL dependency).",
-        "The existing fallback-on-error behavior in HeroSection is preserved."
+        "The new LinkedIn photo is saved as a local static asset under frontend/public/assets/generated/",
+        "HeroSection.tsx references the new local asset as the profile picture src",
+        "The profile photo displayed in the hero section matches the provided LinkedIn image"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/.",
-    "Do not alter any CV data or other sections."
+    "Do not modify any files listed in frontend.immutablePaths",
+    "Profile image must be served as a local static asset, not fetched at runtime from the external LinkedIn URL"
   ],
   "nonGoals": [
-    "Changing any other CV content or layout.",
-    "Adding authentication or backend logic.",
-    "Modifying the background hero image."
+    "Changes to any other CV sections or data",
+    "Backend changes"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Professional headshot portrait photo of a young man, warm-toned background, business casual attire (profile-photo.dim_400x400.png)"
+    ],
     "edits": []
   }
 }

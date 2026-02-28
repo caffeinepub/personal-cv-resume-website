@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T17:59:22.391Z",
+  "generatedAt": "2026-02-28T18:05:33.727Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,10 +12,9 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Download the image from the URL https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as a static asset (frontend/public/assets/generated/profile-photo.png), then update the HeroSection component to use this local asset as the profile picture image source instead of any existing placeholder or external URL.",
+        "summary": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/profile-photo.png",
           "frontend/src/components/cv/HeroSection.tsx"
         ],
         "matchedFiles": [
@@ -29,6 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/profile-photo.dim_400x400.png",
     "frontend/src/components/cv/HeroSection.tsx",
     "frontend/src/data/cv.ts",
     "project_state.json",

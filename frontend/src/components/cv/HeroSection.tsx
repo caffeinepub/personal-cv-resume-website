@@ -6,7 +6,7 @@ interface HeroSectionProps {
   data: HeroData;
 }
 
-const FALLBACK_PHOTO = '/assets/generated/profile-photo.png';
+const FALLBACK_PHOTO = '/assets/generated/profile-photo.dim_400x400.png';
 
 export function HeroSection({ data }: HeroSectionProps) {
   const [imgSrc, setImgSrc] = useState<string>(

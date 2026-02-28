@@ -1,13 +1,13 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T17:59:22.388Z",
-  "summary": "The diff shows HeroSection.tsx updated to use '/assets/generated/profile-photo.png' as both primary source (via data.profilePhoto) and fallback (onError handler), and cv.ts updated to set profilePhoto to that local path. The fallback-on-error behavior is preserved. However, there is no evidence in the diff that the actual image file was downloaded and saved to frontend/public/assets/generated/profile-photo.png — no binary file addition is shown.",
+  "generatedAt": "2026-02-28T18:05:33.724Z",
+  "summary": "The diff shows HeroSection.tsx updated to reference the local asset path '/assets/generated/profile-photo.dim_400x400.png', and cv.ts updated so profilePhoto points to the same local path. However, the actual image file (profile-photo.dim_400x400.png) is not present in the diff as an added file under frontend/public/assets/generated/.",
   "missing_requirements": [
     {
       "id": "REQ-1",
-      "requirement": "Download the image from the LinkedIn URL and save it as a static asset at frontend/public/assets/generated/profile-photo.png",
-      "reason": "The diff shows no added files. The image file frontend/public/assets/generated/profile-photo.png does not appear in the 'ADDED FILES' section, meaning the actual binary asset may not have been downloaded and saved. The code references the path but the file itself is not confirmed present.",
+      "requirement": "The new LinkedIn photo must be saved as a local static asset under frontend/public/assets/generated/",
+      "reason": "The diff shows no added files. The image file 'profile-photo.dim_400x400.png' does not appear in the ADDED FILES section of the diff, meaning the actual binary asset was not committed or recorded as part of this change.",
       "evidence": [
         "frontend/src/components/cv/HeroSection.tsx",
         "frontend/src/data/cv.ts"
@@ -15,7 +15,7 @@
     }
   ],
   "hallucinated_features": [],
-  "confidence": 0.72,
+  "confidence": 0.8,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/cv/HeroSection.tsx",

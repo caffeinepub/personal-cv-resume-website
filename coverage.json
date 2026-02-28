@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-09T13:21:17.711Z",
+  "generatedAt": "2026-02-28T17:59:22.391Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,9 +12,10 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Update the profile photo displayed in the Hero section to use this exact image URL as the <img> src: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU",
+        "summary": "Download the image from the URL https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as a static asset (frontend/public/assets/generated/profile-photo.png), then update the HeroSection component to use this local asset as the profile picture image source instead of any existing placeholder or external URL.",
         "status": "implemented",
         "plannedFiles": [
+          "frontend/public/assets/generated/profile-photo.png",
           "frontend/src/components/cv/HeroSection.tsx"
         ],
         "matchedFiles": [
@@ -29,6 +30,7 @@
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/components/cv/HeroSection.tsx",
+    "frontend/src/data/cv.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import type { HeroData } from '../../data/cv';
 
@@ -5,7 +6,13 @@ interface HeroSectionProps {
   data: HeroData;
 }
 
+const FALLBACK_PHOTO = '/assets/generated/profile-photo.png';
+
 export function HeroSection({ data }: HeroSectionProps) {
+  const [imgSrc, setImgSrc] = useState<string>(
+    data.profilePhoto || FALLBACK_PHOTO
+  );
+
   return (
     <section 
       id="hero" 
@@ -22,9 +29,10 @@ export function HeroSection({ data }: HeroSectionProps) {
       <div className="relative z-10 container mx-auto px-4 max-w-4xl text-center pt-16">
         <div className="mb-6 flex justify-center">
           <img 
-            src="https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU" 
+            src={imgSrc}
             alt="Vibhanshu Meshram" 
-            className="h-24 w-24 md:h-32 md:w-32 rounded-full border-4 border-primary shadow-lg object-cover"
+            className="h-32 w-32 md:h-40 md:w-40 rounded-full border-4 border-primary shadow-lg object-cover object-top"
+            onError={() => setImgSrc(FALLBACK_PHOTO)}
           />
         </div>
         

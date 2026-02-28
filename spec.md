@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Update the Hero section profile photo to load from the provided LinkedIn image URL.
+**Goal:** Replace the current profile picture in the Hero section with the user's LinkedIn photo, served as a local asset.
 
 **Planned changes:**
-- Replace the Hero profile image `<img>` `src` with the exact provided URL.
-- Keep the existing circular styling (`rounded-full`) along with current sizing and border styles unchanged.
+- Download the LinkedIn profile photo and save it as `frontend/public/assets/generated/profile-photo.png`
+- Update the HeroSection component to use this local asset path as the profile picture image source
 
-**User-visible outcome:** The Hero section shows the new profile photo from the LinkedIn URL, with the same circular appearance and styling as before.
+**User-visible outcome:** The Hero section displays the user's LinkedIn photo as the profile picture, loaded from a local file with no external URL dependency.

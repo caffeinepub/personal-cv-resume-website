@@ -3,6 +3,7 @@ export interface HeroData {
   title: string;
   summary: string;
   location?: string;
+  profilePhoto?: string;
 }
 
 export interface ExperienceEntry {
@@ -57,77 +58,151 @@ export interface CVData {
 export const cvData: CVData = {
   hero: {
     name: "Vibhanshu Meshram",
-    title: "B.Tech 3rd Year • IIoT Engineering Student",
-    summary: "Fast learner with an adaptive mindset and a personal approach to problem-solving. Specializing in Industrial Internet of Things (IIoT) with strong Python skills and experience in C/C++. Passionate about sensor fusion, data processing, and building intelligent decision-making systems from sensor inputs.",
-    location: "Nagpur, India"
+    title: "IIoT Engineering Student · Python Developer · Embedded Systems Enthusiast",
+    summary:
+      "3rd-year B.Tech student specialising in Industrial Internet of Things at St. Vincent Pallotti College of Engineering, Nagpur. Fast learner with an adaptive mindset and a personal approach to problem-solving. Passionate about sensor fusion, real-time data processing, and building intelligent decision-making systems from raw sensor inputs.",
+    location: "Nagpur, Maharashtra, India",
+    profilePhoto: "/assets/generated/profile-photo.png",
   },
   experience: [
     {
       role: "IIoT Project Developer",
-      company: "Academic Projects",
-      location: "Nagpur",
-      startDate: "2024",
+      company: "Academic & Self-Initiated Projects",
+      location: "Nagpur, India",
+      startDate: "Jan 2024",
       endDate: "Present",
       description: [
-        "Developed end-to-end sensor processing systems with intelligent decision-making capabilities",
-        "Implemented sensor fusion algorithms for improved data accuracy and reliability",
-        "Built weight distribution analysis systems using multiple pressure sensors",
-        "Applied Python for rapid prototyping and C/C++ for performance-critical components"
-      ]
-    }
+        "Designed and built end-to-end sensor processing pipelines with intelligent, rule-based decision-making capabilities.",
+        "Implemented multi-sensor fusion algorithms to improve measurement accuracy and reduce noise in industrial environments.",
+        "Developed a weight distribution analysis system using an array of pressure sensors with real-time load-balancing logic.",
+        "Prototyped solutions rapidly in Python and optimised performance-critical modules in C/C++ for embedded targets.",
+        "Documented system architectures and shared project artefacts via Google Drive for collaborative review.",
+      ],
+    },
+    {
+      role: "Student Researcher — Embedded Systems",
+      company: "St. Vincent Pallotti College of Engineering",
+      location: "Nagpur, India",
+      startDate: "Aug 2023",
+      endDate: "Dec 2023",
+      description: [
+        "Explored IoT communication protocols (MQTT, Modbus, OPC-UA) and their applicability in industrial settings.",
+        "Conducted lab experiments on microcontroller interfacing (Arduino, ESP32) with various sensor modules.",
+        "Collaborated with peers on a group project integrating temperature, humidity, and proximity sensors into a unified dashboard.",
+      ],
+    },
   ],
   education: [
     {
-      degree: "Bachelor of Technology in Industrial Internet of Things (IIoT)",
-      institution: "St. Vincent Pallotti College of Engineering",
-      location: "Nagpur, India",
+      degree: "Bachelor of Technology — Industrial Internet of Things (IIoT)",
+      institution: "St. Vincent Pallotti College of Engineering & Technology",
+      location: "Nagpur, Maharashtra, India",
       startDate: "2023",
-      endDate: "Present (3rd Year)",
+      endDate: "2027 (Expected)",
       details: [
-        "Specialization: Industrial Internet of Things (IIoT)",
-        "Focus Areas: Sensor Networks, Data Processing, Embedded Systems",
-        "Hands-on experience with sensor integration and real-time data analysis"
-      ]
-    }
+        "Specialisation: Industrial Internet of Things (IIoT)",
+        "Core subjects: Sensor Networks, Embedded Systems, Data Processing, Industrial Automation, Signal Processing",
+        "Hands-on lab work with microcontrollers, sensor modules, and real-time operating systems",
+        "Active participant in technical workshops and inter-college hackathons",
+      ],
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC) — Science (PCM)",
+      institution: "Maharashtra State Board",
+      location: "Nagpur, Maharashtra, India",
+      startDate: "2021",
+      endDate: "2023",
+      details: [
+        "Subjects: Physics, Chemistry, Mathematics",
+        "Developed strong analytical and quantitative foundations that underpin current engineering studies",
+      ],
+    },
   ],
   skills: [
     {
       category: "Programming Languages",
-      skills: ["Python (Primary)", "C", "C++"]
+      skills: ["Python", "C", "C++"],
     },
     {
-      category: "IIoT & Sensors",
-      skills: ["Sensor Fusion", "Sensor Data Processing", "Weight Distribution Analysis", "Real-time Decision Systems", "Embedded Systems", "IoT Protocols"]
+      category: "IIoT & Embedded Systems",
+      skills: [
+        "Sensor Fusion",
+        "Sensor Data Processing",
+        "Embedded C",
+        "Arduino",
+        "ESP32",
+        "MQTT",
+        "Modbus",
+        "OPC-UA",
+        "Real-time Systems",
+        "IoT Protocols",
+      ],
     },
     {
-      category: "Technical Skills",
-      skills: ["Data Analysis", "Algorithm Design", "System Integration", "Signal Processing", "Problem Solving"]
+      category: "Data & Analytics",
+      skills: [
+        "Data Analysis",
+        "Signal Processing",
+        "Algorithm Design",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Real-time Decision Logic",
+      ],
+    },
+    {
+      category: "Tools & Platforms",
+      skills: [
+        "Git & GitHub",
+        "VS Code",
+        "Arduino IDE",
+        "PlatformIO",
+        "Google Colab",
+        "Linux (Ubuntu)",
+      ],
     },
     {
       category: "Soft Skills",
-      skills: ["Fast Learner", "Adaptive Mindset", "Personal Problem-Solving Approach", "Analytical Thinking", "Self-Motivated"]
-    }
+      skills: [
+        "Fast Learner",
+        "Adaptive Mindset",
+        "Analytical Thinking",
+        "Self-Motivated",
+        "Team Collaboration",
+        "Technical Documentation",
+      ],
+    },
   ],
   projects: [
     {
-      title: "Sensor Fusion System",
-      description: "Developed a sensor fusion system that combines data from multiple sensors to improve accuracy and reliability. Implemented advanced algorithms to merge sensor readings and reduce noise, enabling more precise measurements for industrial applications.",
-      technologies: ["Python", "C++", "Sensor Integration", "Data Fusion Algorithms"]
+      title: "Multi-Sensor Fusion System",
+      description:
+        "Designed and implemented a sensor fusion system that combines readings from multiple heterogeneous sensors (accelerometer, gyroscope, pressure) to produce a single, high-confidence output. Applied complementary and Kalman filter techniques to reduce noise and drift, enabling more precise measurements for industrial monitoring applications.",
+      technologies: ["Python", "C++", "Kalman Filter", "NumPy", "Sensor Integration"],
     },
     {
       title: "Weight Distribution Analysis System",
-      description: "Built an intelligent system using multiple pressure sensors to analyze weight distribution patterns. The system processes sensor data in real-time and makes automated decisions based on distribution metrics, useful for load balancing and safety monitoring applications.",
-      technologies: ["Python", "C", "Pressure Sensors", "Real-time Processing", "Decision Logic"]
+      description:
+        "Built an intelligent load-monitoring system using an array of pressure sensors to analyse weight distribution patterns in real time. The system processes sensor data, detects imbalance conditions, and triggers automated alerts — useful for load balancing, structural safety monitoring, and logistics applications.",
+      technologies: ["Python", "C", "Pressure Sensors", "Real-time Processing", "Decision Logic", "Matplotlib"],
     },
     {
-      title: "End-to-End Sensor Processing Pipeline",
-      description: "Created a complete system that takes raw input from sensors, processes the data through multiple stages, and outputs intelligent decisions. The pipeline includes data acquisition, filtering, analysis, and automated decision-making, demonstrating full-stack IIoT capabilities.",
-      technologies: ["Python", "C/C++", "Sensor Networks", "Data Processing", "Decision Systems"]
-    }
+      title: "End-to-End IIoT Data Pipeline",
+      description:
+        "Created a complete data pipeline that acquires raw sensor data, applies multi-stage filtering and feature extraction, and outputs actionable decisions via a lightweight dashboard. The pipeline demonstrates full-stack IIoT capabilities from hardware interfacing to data visualisation.",
+      technologies: ["Python", "C/C++", "MQTT", "ESP32", "Pandas", "Matplotlib", "Decision Systems"],
+    },
+    {
+      title: "Smart Environment Monitor",
+      description:
+        "Developed a low-cost environment monitoring node using ESP32 with DHT22 (temperature/humidity) and MQ-135 (air quality) sensors. Data is published over MQTT to a local broker and visualised on a real-time web dashboard, demonstrating end-to-end IoT connectivity.",
+      technologies: ["ESP32", "Arduino IDE", "MQTT", "DHT22", "MQ-135", "JavaScript", "Node-RED"],
+    },
   ],
   contact: {
     email: "vibhanshuinfo@gmail.com",
     linkedin: "https://www.linkedin.com/in/vibhanshumeshram2004",
-    googleDrive: "https://drive.google.com/drive/folders/14-wxvAyq3ePvAnOJRftMr1endpOhBBTL?usp=drive_link"
-  }
+    googleDrive:
+      "https://drive.google.com/drive/folders/14-wxvAyq3ePvAnOJRftMr1endpOhBBTL?usp=drive_link",
+  },
 };

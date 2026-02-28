@@ -1,47 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Update Hero profile photo to provided URL",
+  "title": "Set LinkedIn photo as profile picture in Hero section",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the profile photo displayed in the Hero section to use this exact image URL as the <img> src: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU",
+      "text": "Download the image from the URL https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as a static asset (frontend/public/assets/generated/profile-photo.png), then update the HeroSection component to use this local asset as the profile picture image source instead of any existing placeholder or external URL.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-1"
+          "msg-4"
         ],
         "quotes": [
-          "Add this profile photo https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU"
+          "set this image as profile picture"
         ]
       },
       "acceptanceCriteria": [
-        "The Hero section profile image loads from the provided LinkedIn URL and visually replaces the previous photo.",
-        "No other Hero content (name, title, summary, CTA buttons) changes as part of this update.",
-        "The profile image remains circular (rounded-full) and keeps its existing sizing and border styling."
+        "The profile photo displayed in the HeroSection matches the provided LinkedIn image.",
+        "The image is served from frontend/public/assets/generated/profile-photo.png (no external URL dependency).",
+        "The existing fallback-on-error behavior in HeroSection is preserved."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui (immutable paths).",
-    "Use English for any user-facing text."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/.",
+    "Do not alter any CV data or other sections."
   ],
   "nonGoals": [
-    "Do not add backend functionality or persist profile images in the canister.",
-    "Do not change the overall site theme, layout, or other CV section content beyond updating the Hero profile photo source."
+    "Changing any other CV content or layout.",
+    "Adding authentication or backend logic.",
+    "Modifying the background hero image."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

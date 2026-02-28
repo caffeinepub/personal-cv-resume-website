@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes all CV sections with top navigation and footer; footer now displays personalized closing message from Vibhanshu instead of caffeine.ai attribution.",
+  "frontend/src/data/cv.ts": "Central data module containing all CV content for Vibhanshu Meshram with updated contact information (new email, LinkedIn, Google Drive link) and extended ContactData type to support Google Drive.",
+  "frontend/src/components/cv/TopNav.tsx": "Fixed top navigation component with smooth scroll anchors to all sections, active section highlighting, and responsive mobile menu; logo replaced with text-based brand initials \"VM\".",
+  "frontend/src/components/cv/Section.tsx": "Reusable section wrapper component that enforces consistent spacing, typography, and max-width layout across all CV sections.",
+  "frontend/src/components/cv/HeroSection.tsx": "Hero section component displaying name, title, summary, location, and profile photo with call-to-action buttons; now uses the updated LinkedIn profile image URL (ending in 1770541359476).",
+  "frontend/src/components/cv/ExperienceSection.tsx": "Experience section component rendering a timeline of work history with role, company, location (when present), and bullet-point descriptions; date-range block removed from card headers.",
+  "frontend/src/components/cv/EducationSection.tsx": "Education section component displaying academic credentials with degree, institution, dates, location, and additional details.",
+  "frontend/src/components/cv/SkillsSection.tsx": "Skills section component organizing technical and soft skills into categorized groups with badge-style tags.",
+  "frontend/src/components/cv/ProjectsSection.tsx": "Projects section component showcasing portfolio items with descriptions, technologies, and links to live demos and GitHub repositories.",
+  "frontend/src/components/cv/ContactSection.tsx": "Contact section component displaying contact methods and social links with icons in an interactive card grid layout; Google Drive contact item now shows \"Projects\" as label and \"Google Drive\" as value.",
+  "frontend/src/hooks/useSeoFromCvData.ts": "Custom hook that dynamically sets document title and meta tags (description, Open Graph, Twitter Card) based on CV data for SEO and social sharing.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks; currently unused as all CV data is static and sourced from the data module.",
+  "frontend/src/index.css": "Global styles with OKLCH-based warm earthy color system (terracotta primary, beige secondary) for both light and dark modes, plus smooth scroll behavior.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom font families (Inter, Merriweather), extended color tokens matching the warm professional palette, and enhanced shadows.",
+  "frontend/index.html": "HTML entry point with meta tags and Google Fonts preconnect for Inter and Merriweather font families."
+}

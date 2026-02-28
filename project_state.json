@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-update-the-profile-photo-displayed-in-the-hero-section-to-use-this-exact-image-url-as-the-img-src-https-media-licdn-com-dms-image-v2-d4d03aqg-vkicm3o7oq-profile-displayphoto-scale-200-200-b4dzw8fro0hway-0-1770541359476-e-1772064000-v-beta-t-llive-e8o6kdoe8ocwlvawl8vnm5whgnfogpc7gsdau",
+      "title": "Update the profile photo displayed in the Hero section to use this exact image URL as the <img> src: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add/update the user profile photo using the provided image URL",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Update Hero profile photo to provided URL",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

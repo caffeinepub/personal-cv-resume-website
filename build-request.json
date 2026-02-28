@@ -1,0 +1,47 @@
+{
+  "kind": "build_request",
+  "title": "Update Hero profile photo to provided URL",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the profile photo displayed in the Hero section to use this exact image URL as the <img> src: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "Add this profile photo https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_200_200/B4DZw8fRO0HwAY-/0/1770541359476?e=1772064000&v=beta&t=LliVE_e8O6KDOE8oCWLvaWL8Vnm5WhGNfogpC7gsdaU"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Hero section profile image loads from the provided LinkedIn URL and visually replaces the previous photo.",
+        "No other Hero content (name, title, summary, CTA buttons) changes as part of this update.",
+        "The profile image remains circular (rounded-full) and keeps its existing sizing and border styling."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui (immutable paths).",
+    "Use English for any user-facing text."
+  ],
+  "nonGoals": [
+    "Do not add backend functionality or persist profile images in the canister.",
+    "Do not change the overall site theme, layout, or other CV section content beyond updating the Hero profile photo source."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

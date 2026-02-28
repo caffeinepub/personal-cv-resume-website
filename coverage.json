@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T18:05:33.727Z",
+  "generatedAt": "2026-02-28T18:09:24.371Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,7 +12,7 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
+        "summary": "In HeroSection.tsx, replace the current profile image src with the external LinkedIn URL: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8v1P42PUa-DT2DJzkk. The target element is the <img> at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/img[1] (the profile photo in the Hero section). Update the img src to point directly to this LinkedIn URL, retaining all existing alt text, className, and fallback/error handling logic.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/cv/HeroSection.tsx"
@@ -28,7 +28,6 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/profile-photo.dim_400x400.png",
     "frontend/src/components/cv/HeroSection.tsx",
     "frontend/src/data/cv.ts",
     "project_state.json",

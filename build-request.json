@@ -1,39 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Update profile picture from LinkedIn URL",
+  "title": "Replace profile photo with LinkedIn image URL",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
+      "text": "In HeroSection.tsx, replace the current profile image src with the external LinkedIn URL: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8v1P42PUa-DT2DJzkk. The target element is the <img> at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/img[1] (the profile photo in the Hero section). Update the img src to point directly to this LinkedIn URL, retaining all existing alt text, className, and fallback/error handling logic.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-4"
         ],
         "quotes": [
-          "add this image as profile pic"
+          "replace this image with https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk"
         ]
       },
       "acceptanceCriteria": [
-        "The new LinkedIn photo is saved as a local static asset under frontend/public/assets/generated/",
-        "HeroSection.tsx references the new local asset as the profile picture src",
-        "The profile photo displayed in the hero section matches the provided LinkedIn image"
+        "The profile photo in the Hero section displays the image from the provided LinkedIn URL.",
+        "No other images or elements on the page are affected.",
+        "Existing alt text, CSS classes, and error/fallback handling on the img element are preserved.",
+        "The change is limited to the img element at the specified XPath in HeroSection.tsx."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files listed in frontend.immutablePaths",
-    "Profile image must be served as a local static asset, not fetched at runtime from the external LinkedIn URL"
+    "Only modify the img element identified by XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/img[1] in HeroSection.tsx.",
+    "Do not alter any other component, layout, or styling."
   ],
   "nonGoals": [
-    "Changes to any other CV sections or data",
-    "Backend changes"
+    "Downloading or saving the LinkedIn image as a local static asset.",
+    "Changing any other section or component of the CV.",
+    "Modifying backend logic."
   ],
   "imageRequirements": {
-    "required": [
-      "Professional headshot portrait photo of a young man, warm-toned background, business casual attire (profile-photo.dim_400x400.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

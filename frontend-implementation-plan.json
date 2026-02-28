@@ -1,21 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update profile picture from LinkedIn URL",
+  "title": "Replace profile photo with LinkedIn image URL",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the current profile photo in HeroSection with the new LinkedIn image saved as a local static asset",
+      "summary": "Replace the profile image src in HeroSection.tsx with the external LinkedIn URL",
       "acceptanceCriteria": [
-        "The new LinkedIn photo is saved as a local static asset under frontend/public/assets/generated/",
-        "HeroSection.tsx references the new local asset as the profile picture src",
-        "The profile photo displayed in the hero section matches the provided LinkedIn image"
+        "The profile photo in the Hero section displays the image from the provided LinkedIn URL.",
+        "No other images or elements on the page are affected.",
+        "Existing alt text, CSS classes, and error/fallback handling on the img element are preserved.",
+        "The change is limited to the img element at the specified XPath in HeroSection.tsx."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/cv/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the profile photo src to reference the new generated asset at frontend/public/assets/generated/profile-photo.dim_400x400.png instead of the previous profile image. The generated image matches the LinkedIn photo provided by the user and replaces any previously set profile photo."
+          "description": "Update the profile image src attribute to use the LinkedIn URL: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8v1P42PUa-DT2DJzkk. Preserve all existing alt text, className, and any error/fallback handling logic on the img element. Do not modify any other part of the component."
         }
       ]
     }

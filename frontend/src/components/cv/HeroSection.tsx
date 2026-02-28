@@ -33,6 +33,7 @@ export function HeroSection({ data }: HeroSectionProps) {
             alt="Vibhanshu Meshram" 
             className="h-32 w-32 md:h-40 md:w-40 rounded-full border-4 border-primary shadow-lg object-cover object-top"
             onError={() => setImgSrc(FALLBACK_PHOTO)}
+            referrerPolicy="no-referrer"
           />
         </div>
         

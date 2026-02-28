@@ -1,9 +1,9 @@
 {
   "frontend/src/App.tsx": "Main application component that composes all CV sections with top navigation and footer; footer now displays personalized closing message from Vibhanshu instead of caffeine.ai attribution.",
-  "frontend/src/data/cv.ts": "Central CV data module for Vibhanshu Meshram; `profilePhoto` now points to `/assets/generated/profile-photo.dim_400x400.png` (the new LinkedIn photo saved as a local static asset).",
+  "frontend/src/data/cv.ts": "Central CV data module for Vibhanshu Meshram; `profilePhoto` now points to the LinkedIn profile photo URL instead of the local static asset.",
   "frontend/src/components/cv/TopNav.tsx": "Fixed top navigation component with smooth scroll anchors to all sections, active section highlighting, and responsive mobile menu; logo replaced with text-based brand initials \"VM\".",
   "frontend/src/components/cv/Section.tsx": "Reusable section wrapper component that enforces consistent spacing, typography, and max-width layout across all CV sections.",
-  "frontend/src/components/cv/HeroSection.tsx": "Hero section component that displays the profile photo sourced from `data.profilePhoto` with an `onError` fallback; both primary and fallback paths now reference the new `/assets/generated/profile-photo.dim_400x400.png` asset.",
+  "frontend/src/components/cv/HeroSection.tsx": "Hero section component that displays the profile photo sourced from `data.profilePhoto` (now the LinkedIn URL) with a `referrerPolicy=\"no-referrer\"` attribute added and the local asset as `onError` fallback.",
   "frontend/src/components/cv/ExperienceSection.tsx": "Experience section component rendering a timeline of work history with role, company, location (when present), and bullet-point descriptions; date-range block removed from card headers.",
   "frontend/src/components/cv/EducationSection.tsx": "Education section component displaying academic credentials with degree, institution, dates, location, and additional details.",
   "frontend/src/components/cv/SkillsSection.tsx": "Skills section component organizing technical and soft skills into categorized groups with badge-style tags.",

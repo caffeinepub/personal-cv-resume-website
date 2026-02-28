@@ -62,7 +62,7 @@ export const cvData: CVData = {
     summary:
       "3rd-year B.Tech student specialising in Industrial Internet of Things at St. Vincent Pallotti College of Engineering, Nagpur. Fast learner with an adaptive mindset and a personal approach to problem-solving. Passionate about sensor fusion, real-time data processing, and building intelligent decision-making systems from raw sensor inputs.",
     location: "Nagpur, Maharashtra, India",
-    profilePhoto: "/assets/generated/profile-photo.dim_400x400.png",
+    profilePhoto: "https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk",
   },
   experience: [
     {

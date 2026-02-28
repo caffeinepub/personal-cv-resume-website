@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-download-the-image-at-https-media-licdn-com-dms-image-v2-d4d03aqg-vkicm3o7oq-profile-displayphoto-scale-400-400-b4dzw8fro0hwag-0-1770541359476-e-1773878400-v-beta-t-hnlshkqfneh-boegm1kbbhx7f8u1p42pua-dt2djzkk-and-save-it-as-the-profile-photo-static-asset-then-update-herosection-tsx-to-use-this-new-image-as-the-profile-picture-replacing-any-previously-set-profile-photo",
-      "featureTitle": "Download the image at https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8u1P42PUa-DT2DJzkk and save it as the profile photo static asset, then update HeroSection.tsx to use this new image as the profile picture, replacing any previously set profile photo.",
+      "featureId": "feature-in-herosection-tsx-replace-the-current-profile-image-src-with-the-external-linkedin-url-https-media-licdn-com-dms-image-v2-d4d03aqg-vkicm3o7oq-profile-displayphoto-scale-400-400-b4dzw8fro0hwag-0-1770541359476-e-1773878400-v-beta-t-hnlshkqfneh-boegm1kbbhx7f8v1p42pua-dt2djzkk-the-target-element-is-the-img-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-2-div-1-img-1-the-profile-photo-in-the-hero-section-update-the-img-src-to-point-directly-to-this-linkedin-url-retaining-all-existing-alt-text-classname-and-fallback-error-handling-logic",
+      "featureTitle": "In HeroSection.tsx, replace the current profile image src with the external LinkedIn URL: https://media.licdn.com/dms/image/v2/D4D03AQG_vKIcM3o7oQ/profile-displayphoto-scale_400_400/B4DZw8fRO0HwAg-/0/1770541359476?e=1773878400&v=beta&t=hNLsHkQFnEh-Boegm1kbBhX7F8v1P42PUa-DT2DJzkk. The target element is the <img> at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/img[1] (the profile photo in the Hero section). Update the img src to point directly to this LinkedIn URL, retaining all existing alt text, className, and fallback/error handling logic.",
       "files": [
         "frontend/src/components/cv/HeroSection.tsx"
       ],

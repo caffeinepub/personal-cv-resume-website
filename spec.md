@@ -1,10 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the current profile picture in the hero section with a new photo downloaded from a LinkedIn URL, saved as a local static asset.
+**Goal:** Replace the profile photo in the Hero section with an external LinkedIn image URL.
 
 **Planned changes:**
-- Download the image from the provided LinkedIn URL and save it as a local static asset under `frontend/public/assets/generated/`
-- Update `HeroSection.tsx` to reference the new local asset as the profile picture, replacing the previously set profile photo
+- In `HeroSection.tsx`, update the `src` attribute of the profile photo `<img>` element to point to the provided LinkedIn URL, while retaining all existing alt text, CSS classes, and error/fallback handling logic.
 
-**User-visible outcome:** The hero section displays the new LinkedIn profile photo as the profile picture.
+**User-visible outcome:** The Hero section displays the LinkedIn profile photo instead of the previous image.

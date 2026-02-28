@@ -1,21 +1,19 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T18:05:33.724Z",
-  "summary": "The diff shows HeroSection.tsx updated to reference the local asset path '/assets/generated/profile-photo.dim_400x400.png', and cv.ts updated so profilePhoto points to the same local path. However, the actual image file (profile-photo.dim_400x400.png) is not present in the diff as an added file under frontend/public/assets/generated/.",
-  "missing_requirements": [
+  "generatedAt": "2026-02-28T18:09:24.369Z",
+  "summary": "REQ-1 is substantially implemented: HeroSection.tsx now uses data.profilePhoto (the LinkedIn URL) as the initial src with the local asset as onError fallback, and existing alt text/className are preserved. The LinkedIn URL is set in cv.ts profilePhoto field. However, the URL in cv.ts contains a minor character discrepancy ('F8u1' vs the required 'F8v1'), which may cause the image to fail to load. Additionally, referrerPolicy='no-referrer' was added to the img element, which was not explicitly requested.",
+  "missing_requirements": [],
+  "hallucinated_features": [
     {
-      "id": "REQ-1",
-      "requirement": "The new LinkedIn photo must be saved as a local static asset under frontend/public/assets/generated/",
-      "reason": "The diff shows no added files. The image file 'profile-photo.dim_400x400.png' does not appear in the ADDED FILES section of the diff, meaning the actual binary asset was not committed or recorded as part of this change.",
+      "description": "Added referrerPolicy=\"no-referrer\" attribute to the img element in HeroSection.tsx",
+      "reason": "The build request only asked to update the src while retaining existing attributes. Adding referrerPolicy was not requested.",
       "evidence": [
-        "frontend/src/components/cv/HeroSection.tsx",
-        "frontend/src/data/cv.ts"
+        "frontend/src/components/cv/HeroSection.tsx"
       ]
     }
   ],
-  "hallucinated_features": [],
-  "confidence": 0.8,
+  "confidence": 0.78,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/cv/HeroSection.tsx",
